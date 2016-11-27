@@ -1,0 +1,2 @@
+# excluding debug info, compiler, linker, loader outputs or executables
+bin/*
