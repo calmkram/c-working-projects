@@ -3,11 +3,14 @@
 # Date:		11-27-2016
 # Description:	Makefile for various C programs that I'm developing - 11-27-2016
 #
+#
 
-all:	hello
+GCC=gcc
+CFLAGS=-Wall -v
 
-hello:
-	gcc -Wall -o bin/hello hello.c
+%.o: %.c
+	$(GCC) $< $(CFLAGS) -o $@
+	chmod +x $@
 
 clean:
-	rm bin/hello
+	rm -rf %.o
